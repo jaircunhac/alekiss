@@ -8,14 +8,9 @@ export const MyDatabaseFunctionfunction = ( function (){
             users.push(user)
         },
 
-        remove(user: User[], value: any): boolean{
-            const index = users.indexOf(value);
-            if (index === -1) {
-              return false;
-            }
-            users.splice(index, 1);
-            return true;
-          },
+        remove(index: number): void {
+            users.splice(index, 1)
+        },
 
         //Criar a funcao para deletar um usuario
 
