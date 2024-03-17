@@ -18,6 +18,15 @@ export class MyDatabaseClassic{
         this.users.push(user)
     }
 
+    remove(user: User[], value: any): boolean{
+        const index = this.users.indexOf(value);
+        if (index === -1) {
+          return false;
+        }
+        this.users.splice(index, 1);
+        return true;
+      }
+
     show(): void{
         for(const user of this.users){
             console.log(user)
